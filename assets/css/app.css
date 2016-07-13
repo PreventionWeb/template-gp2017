@@ -263,26 +263,32 @@ ul.links li::after{
 	padding:0.85rem 0 0.45rem;
 }
 .list-module h2 a{
-	display:block;
+	display:table;
+	width:100%;
 	background-color:#f0f5fa;
 	color:#1d4775;
 	padding:0.85rem 0.9375rem 0.55rem;
+	vertical-align:middle;
 }
 .list-module h2 a:focus, .list-module h2 a:hover{
 	text-decoration:none;
 }
-.list-module h2 a span{
-	font-size:0.6875rem;
-	float:right;
-	margin-top:-0.2rem;
-	margin-left:0.4rem;
+.list-module h2 a > span{
+	display:table-cell;
+	vertical-align:middle;
 }
-.list-module h2 a span:last-child{
-	line-height:0.6rem;
-	color:#698cb3;
+.list-module h2 a > span:nth-child(2){
 	text-align:right;
-	margin-top:0;
-	margin-left:0;
+	color:#698cb3;
+	line-height:0.6rem;
+	padding-right:0.3rem;
+	width:1rem;
+	font-size:0.6875rem;
+}
+.list-module h2 a > span:last-child{
+	padding-bottom:0.2rem;
+	width:1rem;
+	font-size:0.6875rem;
 }
 .list-module h2 a:focus span, .list-module h2 a:hover span{
 	color:#1d4775;
