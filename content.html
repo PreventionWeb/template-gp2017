@@ -447,7 +447,8 @@
 							<li><a href="#" title="Preparatory process">Preparatory process</a></li>
 							<li>
 								<!-- Add span 'fa-stack' to elements that have a submenu -->		
-								<a href="#" title="Programme">Programme<span class="fa-stack"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-angle-down fa-stack-1x"></i></span></a>
+								<!-- Add class have-page to parent menu items that have own link -->
+								<a class="have-page" href="http://www.google.com" title="Programme">Programme<span class="fa-stack"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-angle-down fa-stack-1x"></i></span></a>
 								<!-- Add class 'is-active' to have submenu already open -->		
 								<ul class="nested vertical menu is-active">
 									<!-- Add class 'active' for current menu item, at any level -->		
@@ -469,7 +470,8 @@
 							<li><a href="#" title="Key documents">Key documents</a></li>
 							<li><a href="#" title="Practical information">Practical information</a></li>
 							<li>
-								<a href="#" title="News & Media">News & Media<span class="fa-stack"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-angle-down fa-stack-1x"></i></span></a>
+								<!-- Add class have-page to parent menu items that have own link -->
+								<a class="have-page" href="http://www.yahoo.com" title="News & Media">News & Media<span class="fa-stack"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-angle-down fa-stack-1x"></i></span></a>
 								<ul class="nested vertical menu">
 									<li><a href="#" title="Latest announcements">Latest announcements</a></li>
 									<li><a href="#" title="GP in the news">GP in the news</a></li>
@@ -543,6 +545,10 @@
 	<!-- Top band js --><script type="text/javascript" src="http://www.preventionweb.net/assets/shared/topband/js/top-band.js"></script>
 		<script>
       $(document).foundation();
+			<!-- Allow top parent menu items to have own link -->
+			$('.have-page').click(function(e){
+				window.location.href = $(this).attr('href');
+			});
     </script>
   </body>
 </html>
