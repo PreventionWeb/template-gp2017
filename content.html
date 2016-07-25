@@ -441,18 +441,16 @@
 				<div class="medium-3 medium-pull-9 columns">
 	<!-- Left navigation start -->		
 					<nav>
-						<ul id="left-main-menu" class="vertical menu" data-accordion-menu data-multi-open="false">
+						<ul id="left-main-menu" class="vertical menu">
 							<li><a href="#" title="Home">Home</a></li>
-							<li><a href="#" title="About the Global Platform">About the Global Platform</a></li>
+							<li class="active"><a href="#" title="About the Global Platform">About the Global Platform</a></li>
 							<li><a href="#" title="Preparatory process">Preparatory process</a></li>
-							<li>
-								<!-- Add span 'fa-stack' to elements that have a submenu -->		
-								<!-- Add class have-page to parent menu items that have own link -->
-								<a class="have-page" href="http://www.google.com" title="Programme">Programme<span class="fa-stack"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-angle-down fa-stack-1x"></i></span></a>
-								<!-- Add class 'is-active' to have submenu already open -->		
-								<ul class="nested vertical menu is-active">
+							<!-- Add class 'opened' to items that have the submenu opened -->		
+							<li class="opened">
+								<a href="#" title="Programme">Programme</a>
+								<ul class="nested vertical menu">
 									<!-- Add class 'active' for current menu item, at any level -->		
-									<li class="active"><a href="#" title="Official statements">Official statements</a></li>
+									<li><a href="#" title="Official statements">Official statements</a></li>
 									<li><a href="#" title="High level dialogue">High level dialogue</a></li>
 									<li><a href="#" title="Consultation days">Consultation days</a></li>
 									<li><a href="#" title="Ceremonies & Receptions">Ceremonies & Receptions</a></li>
@@ -470,8 +468,8 @@
 							<li><a href="#" title="Key documents">Key documents</a></li>
 							<li><a href="#" title="Practical information">Practical information</a></li>
 							<li>
-								<!-- Add class have-page to parent menu items that have own link -->
-								<a class="have-page" href="http://www.yahoo.com" title="News & Media">News & Media<span class="fa-stack"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-angle-down fa-stack-1x"></i></span></a>
+								<!-- Add span 'fa-stack' to elements that have a closed submenu -->		
+								<a href="#" title="News & Media">News & Media<span class="fa-stack"><i class="fa fa-circle-thin fa-stack-2x"></i><i class="fa fa-angle-down fa-stack-1x"></i></span></a>
 								<ul class="nested vertical menu">
 									<li><a href="#" title="Latest announcements">Latest announcements</a></li>
 									<li><a href="#" title="GP in the news">GP in the news</a></li>
@@ -545,10 +543,6 @@
 	<!-- Top band js --><script type="text/javascript" src="http://www.preventionweb.net/assets/shared/topband/js/top-band.js"></script>
 		<script>
       $(document).foundation();
-			<!-- Allow top parent menu items to have own link -->
-			$('.have-page').click(function(e){
-				window.location.href = $(this).attr('href');
-			});
     </script>
   </body>
 </html>
