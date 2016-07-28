@@ -179,7 +179,7 @@
 								</div>
 							</div>
 							
-							<!-- Links list module -->		
+							<!-- Simple links list module -->		
 							<div class="clearfix">
 								<hr>
 								<ul class="no-bullet links">
@@ -188,11 +188,9 @@
 								</ul>
 							</div>
 							
-							<!-- Documents list module with clickable title -->		
+							<!-- Documents list module with clickable title, full row layout -->		
 							<div class="list-module">
-										<h2><a href="#" title=""><span>Lorem ipsum dolor sit amet consectetur adipiscing elit</span><span>view<br>all</span><span><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-angle-right fa-stack-1x"></i></span></span></a></h2>
-								<!-- h3 is optional, if no text is available, remove h3 tag -->
-								<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+								<h2><a href="#" title=""><span>Lorem ipsum dolor sit amet consectetur adipiscing elit</span><span>view<br>all</span><span><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-angle-right fa-stack-1x"></i></span></span></a></h2>
 								<ul class="no-bullet files-documents">
 									<li>
 										<i class="fa fa-file-pdf-o"></i>
@@ -248,11 +246,13 @@
 								</ul>
 							</div>
 							
-							<!-- Documents list module - version with no clickable title (add 'no-link' class to h2) -->		
+							<!-- Documents list module - version with no clickable title (enclose h2/h3 in 'no-link' div) -->		
 							<div class="list-module">
-								<h2 class="no-link">tempor incididunt ut labore et dolore magna aliqua</h2>
-								<!-- h3 is optional, if no text is available, remove h3 tag -->
-								<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+								<div class="no-link">
+									<h2>tempor incididunt ut labore et dolore magna aliqua</h2>
+									<!-- h3 is optional, if no text is available, remove h3 tag -->
+									<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+								</div>
 								<ul class="no-bullet files-documents">
 									<li>
 										<i class="fa fa-file-pdf-o"></i>
@@ -374,9 +374,9 @@
 								<div class="small-12 medium-6 columns">
 									<!-- Documents list module with no clickable title, identical to the one in a full row layout -->		
 									<div class="list-module">
-										<h2 class="no-link">tempor incididunt ut labore et dolore magna aliqua</h2>
-										<!-- h3 is optional, if no text is available, remove h3 tag -->
-										<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+										<div class="no-link">
+											<h2>tempor incididunt ut labore et dolore magna aliqua</h2>
+										</div>
 										<ul class="no-bullet files-documents">
 											<li>
 												<i class="fa fa-file-pdf-o"></i>
