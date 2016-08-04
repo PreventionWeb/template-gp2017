@@ -470,7 +470,7 @@ ul.links li::after{
 .list-module .documents-publications li .medium-1{
 	border-right:1px solid #d2dce8;
 }
-.list-module .news-announcements li a {
+.list-module .news-announcements li:not(.load-more) a {
 	display:block;
 	color:#555;
 	overflow:hidden;
@@ -482,6 +482,9 @@ ul.links li::after{
   font-size: 1.125rem;
   line-height: 1.375rem;
 	margin-bottom:0;
+}
+.list-module .news-announcements li > div .media-object-section h4 {
+	margin-bottom:0.5rem;
 }
 .list-module li > div h4 a{
 	color:#555;
@@ -509,6 +512,20 @@ ul.links li::after{
 }
 .list-module .news-announcements a:hover span.float-right {
 	color:#ea6827;
+}
+.news-announcements li .media-object {
+  display: table;
+  width: 100%;
+}
+.news-announcements li .media-object .media-object-section:last-child {
+  width: 100%;
+}
+.list-module .news-announcements a .media-object-section div:last-child {
+	clear:both;
+	overflow:hidden;
+	border-top:1px solid #dfdfdf;
+	margin-top:0.8rem;
+	padding-top:0.4rem;
 }
 .list-module span i {
 	margin-right:0.5rem;
@@ -746,15 +763,18 @@ ul.links li::after{
 .list-module .links-side-nav a:hover .fa-stack-1x{
 	color:#fff;
 }
-.list-module .announcements li{
+.list-module .announcements li:not(.load-more){
 	border-top:3px solid #0eaba4;
 	padding-top:1.25rem;
+}
+.list-module > ul.announcements > li:not(:last-child) {
+  margin-bottom: 2.5rem;
 }
 .list-module .announcements li > div h4 {
   font-size: 1.3125rem;
   line-height: 1.375rem;
 }
-.list-module .announcements li > div span {
+.list-module .announcements li:not(.load-more) > div span {
   margin: 0.5rem 0;
 	display:block;
 	font-weight:700;
@@ -767,10 +787,33 @@ ul.links li::after{
 	font-size:1rem;
 	line-height:1.25rem;
 }
-.list-module .announcements li > a{
-	display:block;
+.list-module .announcements li:not(.load-more) > div:last-child{
 	text-align:right;
-	border-top:1px solid red;
+	border-top:1px solid #bfbfbf;
+	padding-top:0.5rem;
+	margin-top:3rem;
+}
+.list-module .announcements li:not(.load-more) > div:last-child a{
+	text-transform:uppercase;
+	color:#555;
+	font-size:0.8125rem;
+	font-weight:500;
+}
+.list-module .announcements li > div:last-child a i{
+	font-size: 0.6rem;
+	margin-right: 0.3rem;
+}
+.load-more div{
+	text-align:center;
+	border-top:1px solid #dfdfdf;
+	border-bottom:1px solid #dfdfdf;
+	padding:1rem 0;
+}
+.load-more a, .list-module li.load-more > div span{
+	text-transform:uppercase;
+	font-size:1rem;
+	color:#555;
+	font-weight:500;
 }
 .add-list-element{
 	text-align:center;
@@ -1060,11 +1103,14 @@ ul.links li::after{
 #registration-banner{
 	background:url(../img/registration-banner-bkg-1.png) 0 0 repeat-x;
 	float:left;
-	color:#fff;
 	height:89px;
 	text-align:center;
 	width:97%;
 	padding-top: 28px;
+}
+#registration-banner a{
+	color:#fff;
+	text-decoration:none;
 }
 #registration-banner h2{
 	font-size:1.275rem;
