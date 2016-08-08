@@ -185,14 +185,14 @@ cite{
 .menu.expanded > li {
   text-align: center;
 }
-.text li {
+.main-content > ul, .main-content > ol {
+	margin-top:1rem;
+}
+.main-content > ul li, .main-content > ol li {
 	font-family:Georgia, "Times New Roman", Times, serif;
   font-size:1.125rem;
   line-height:2rem;
 	margin-bottom:1rem;
-}
-.text ul, .text ol {
-	margin-top:1rem;
 }
 @media screen and (max-width: 39.9375em) {/*small*/
 .small-centered {
@@ -324,6 +324,10 @@ ul.links{
 	float:right;
 	text-align:right;
 	line-height:1.5rem;
+}
+ul.links.left{
+	float:left;
+	text-align:left;
 }
 ul.links i{
 	margin-right:0.5rem;
