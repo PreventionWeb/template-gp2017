@@ -1134,21 +1134,24 @@ ul.links li::after{
 	height:89px;
 }
 #sign-up-home p{
-	margin-bottom:0;
+	margin-bottom:0.5rem;
 	font-size:0.9375rem;
 	color:#666;
 	font-style:italic;
 	padding-left:1rem;
+	line-height:1.5rem;
 }
 #sign-up-home .input-group-label {
   background: none;
 	color:#0eaba4;
 	padding: 0 0 0 1rem;
 	font-size:0.8125rem;
+	border-color:#0eaba4;
 }
 #sign-up-home .input-group-field {
 	box-shadow:none;
 	border-left:none;
+	border-color:#0eaba4;
 	transition:none;
 	height: 2.54rem;
 	font-size: 0.8125rem;
@@ -1393,10 +1396,6 @@ ul.links li::after{
 	color:#b8b8b8;
 	font-size:1.2rem;
 	top:3px;
-}
-#footer-logo-container .breadcrumbs a{
-	cursor: default;
-	pointer-events: none;
 }
 @media screen and (max-width: 39.9375em) {/*small*/
 #footer-logo-container .small-centered:not(:last-child) img{
