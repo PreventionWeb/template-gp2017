@@ -188,11 +188,30 @@ cite{
 .main-content > ul, .main-content > ol {
 	margin-top:1rem;
 }
+.main-content ol {
+  counter-reset: section;
+	list-style-type:none;
+}
 .main-content > ul li, .main-content > ol li {
 	font-family:Georgia, "Times New Roman", Times, serif;
   font-size:1.125rem;
   line-height:2rem;
 	margin-bottom:1rem;
+	position:relative;
+}
+.main-content ol li::before {
+  content: counters(section,".") ". ";
+	counter-increment: section;
+	position:absolute;
+	width:2.5rem;
+	text-align:right;
+	left:-3rem;
+}
+.main-content ol ol{
+	margin-left: 2.25rem;
+}
+.main-content ol ol ol{
+	margin-left: 3rem;
 }
 @media screen and (max-width: 39.9375em) {/*small*/
 .small-centered {
@@ -226,6 +245,9 @@ cite{
 }
 li .media-object {
   margin-bottom:0;
+}
+.media-object-section {
+	position:relative;
 }
 .media-object.stack-for-all .media-object-section {
 	padding: 0;
@@ -524,6 +546,7 @@ ul.links li::after{
 .news-announcements li .media-object .media-object-section:last-child {
   width: 100%;
 }
+/* RP news list layout change
 .list-module .news-announcements a .media-object-section div:last-child {
 	clear:both;
 	overflow:hidden;
@@ -531,6 +554,7 @@ ul.links li::after{
 	margin-top:0.8rem;
 	padding-top:0.4rem;
 }
+*/
 .list-module span i {
 	margin-right:0.5rem;
 	margin-top:-0.1rem;
@@ -793,9 +817,11 @@ ul.links li::after{
 }
 .list-module .announcements li:not(.load-more) > div:last-child{
 	text-align:right;
+	margin-top:2rem;
+/* RP announcements list layout change
 	border-top:1px solid #bfbfbf;
 	padding-top:0.5rem;
-	margin-top:3rem;
+	*/
 }
 .list-module .announcements li:not(.load-more) > div:last-child a{
 	text-transform:uppercase;
@@ -1234,8 +1260,6 @@ ul.links li::after{
 	font-size:1.25rem;
 }
 #header-hashtags a{
-	cursor: default;
-	pointer-events: none;
 	color:#0eaba4;
 	text-transform:uppercase;
 	font-weight:500;

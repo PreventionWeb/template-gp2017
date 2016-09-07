@@ -59,8 +59,8 @@
 							</nav>
 							<div class="menu-centered">
 								<ul id="header-hashtags" class="menu">
-									<li><a href="#" title="mexicogp2017">#mexicogp2017</a></li>
-									<li><a href="#" title="#switchtosendai">#switchtosendai</a></li>
+									<li><a href="#" title="mexicogp2017" target="_blank">#mexicogp2017</a></li>
+									<li><a href="#" title="#switchtosendai" target="_blank">#switchtosendai</a></li>
 								</ul>
 							</div>
 						</div>
@@ -262,31 +262,6 @@
 	<!-- Top band js --><script type="text/javascript" src="http://www.preventionweb.net/assets/shared/topband/js/top-band.js"></script>
 		<script>
       $(document).foundation();
-			$(document).ready(function(){
-				// Table row click event
-				$(".clickable-row").click(function() {
-						window.document.location = $(this).data("href");
-				});
-				
-				// Position the sticky back to top button relative to container
-				var offset = $('#content-container').offset();
-				var bottomRightX = offset.left + $('#content-container').width()-20;
-				$('.go-top').css('left', bottomRightX);
-				// Show or hide the sticky back to top button
-				$(window).scroll(function() {
-					if ($(this).scrollTop() > 200) {
-						$('.go-top').fadeIn(200);
-					} else {
-						$('.go-top').fadeOut(200);
-					}
-				});
-				
-				// Animate the scroll to top
-				$('.go-top').click(function(event) {
-					event.preventDefault();
-					$('html, body').animate({scrollTop: 0}, 300);
-				})
-			});
     </script>
   </body>
 </html>
