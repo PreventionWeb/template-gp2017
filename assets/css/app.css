@@ -38,11 +38,18 @@ h5.table-title{
 	margin-bottom:0;
 	border-color:#c9d5e3;
 }
+form h5{
+	border:none;
+	padding:2.125rem 0 0;
+}
 p {
 	font-family:Georgia, "Times New Roman", Times, serif;
   font-size:1.125rem;
   line-height:2.375rem;
   margin-bottom: 1.875rem;
+}
+form p {
+	font-family: "DIN Next W01", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 a {
   color: #ea6827;
@@ -101,6 +108,9 @@ table p {
 }
 table .fa {
 	font-size:0.7rem;
+}
+input, select, textarea {
+	border-radius:2px !important;
 }
 .title-bar {
   background-color:#fff;
@@ -169,6 +179,23 @@ table .fa {
 }
 .tooltip.top::before {
   border-color: #0eaba4 transparent transparent;
+}
+/* Foundation upload button: file name positioned differently in IE, find another solution
+input[type=file].show-for-sr {
+  clip: auto;
+  height: auto;
+  left: 2rem;
+  overflow: hidden;
+  position: absolute !important;
+  top: 0.3rem;
+  width: auto;
+}
+*/
+[type="file"] {
+	margin-top:0.5rem;
+}
+.help-text {
+  margin-bottom: 1rem;
 }
 /************/
 
@@ -373,6 +400,15 @@ ul.links li::after{
 	top:1px;
 	margin-left:0.7rem;
 }
+/* Foundation upload button: file name positioned differently in IE, find another solution
+.file-upload{
+	position:relative;
+}
+.file-upload .button{
+	z-index: 10;
+	position: relative;
+}
+*/
 .list-module{
 	margin-bottom:2.5rem;
 	position:relative;
@@ -1191,6 +1227,74 @@ ul.links li::after{
 }
 #photo-slider .flexslider{
 	margin-bottom:2rem;
+}
+#process-steps{
+	background-color:#ccf4f2;
+	color: #0eaba4;
+	overflow:hidden;
+}
+#process-steps > div{
+	float:left;
+	padding:1rem 1rem 0.6rem;
+	position:relative;
+	margin-right: 2rem;
+}
+#process-steps > div.current{
+	background-color:#0eaba4;
+	color:#fff;
+}
+#process-steps > div::after{
+	content:"";
+	width: 0; 
+  height: 0; 
+	border-top:1.85rem solid transparent;
+	border-bottom:1.85rem solid transparent;
+	border-left:1.85rem solid #ccf4f2;
+	position:absolute;
+	z-index:30;
+	right:-1.5rem;
+	top:0;
+}
+#process-steps > div.current::after{
+	border-left:1.85rem solid #0eaba4;
+}
+#process-steps > div div::after{
+	content:"";
+	width: 0; 
+  height: 0; 
+	border-top:2.5rem solid transparent;
+	border-bottom:2.5rem solid transparent;
+	border-left:2.5rem solid #fff;
+	position:absolute;
+	z-index:20;
+	right:-2.2rem;
+	top:-0.65rem;
+}
+#process-steps > div.current::before {
+  content: "";
+  width: 2rem;
+  height: 4rem;
+  background-color: #0eaba4;
+  position: absolute;
+  left: -2rem;
+  top: 0;
+}
+#process-steps h5 {
+	font-weight:700;
+  font-size: 1rem;
+  line-height:1rem;
+  padding:0;
+  border:none;
+	margin:0;
+	text-transform:uppercase;
+	color: #0eaba4;
+}
+#process-steps .current h5 {
+	color:#fff;
+}
+#process-steps span {
+	font-size:0.75rem;
+	display:block;
 }
 #main-container{
 	background:#fff url(../img/background-pattern.jpg) 0 0 repeat-x;
