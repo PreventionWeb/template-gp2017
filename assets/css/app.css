@@ -1172,7 +1172,11 @@ ul.links li::after{
 	height:89px;
 	text-align:center;
 	width:97%;
-	padding-top: 28px;
+	display:table;
+}
+#registration-banner div{
+	display:table-cell;
+	vertical-align:middle;
 }
 #registration-banner a{
 	color:#fff;
@@ -1180,8 +1184,8 @@ ul.links li::after{
 }
 #registration-banner h2{
 	font-size:1.275rem;
-	line-height:1rem;
-	margin:0;
+	line-height:normal;
+	margin:4px 0 0;
 	text-transform:uppercase;
 	font-weight:700;
 	color:#fff;
