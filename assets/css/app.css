@@ -1083,6 +1083,7 @@ ul.links li::after{
 }
 #updates-scroller{
 	margin-bottom:0;
+	display:none;
 }
 #updates-scroller li{
 	font-size:1.25rem;

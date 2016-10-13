@@ -634,8 +634,15 @@
 				
 				// JQuery Advanced News Ticker activation
 				var i=1;
+				var rowheight=0;
+				if (Foundation.MediaQuery.atLeast('large')) {
+					rowheight = 34
+				} else {
+					rowheight = 58
+				}				
+				$('#updates-scroller').show();
 				$('#updates-scroller').newsTicker({
-					row_height: 34,
+					row_height: rowheight,
 					max_rows: 1,
 //					autostart: 0,
 					prevButton: $('#prev-update'),
